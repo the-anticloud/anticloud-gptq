@@ -1,0 +1,367 @@
+{
+ "schema": "anticloud.tier-bench/1",
+ "project": "GPTQ",
+ "source": {
+  "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\CHIP_QUANTIZATION\\GPTQ\\UPSTREAM_CLONE",
+  "git": {
+   "head": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE",
+   "url": "https://github.com/the-anticloud/OPENMRS_CORE.git",
+   "branch": "master",
+   "committed_at": "2026-09-29T11:06:59+04:00",
+   "sha_verified_from": "local clone .git file read (no .git dir in clone)"
+  }
+ },
+ "metrics": {
+  "files_total": 41,
+  "source_files_scanned": 34,
+  "lines_of_code": 6820,
+  "languages": {
+   ".py": 32,
+   ".md": 3,
+   "(none)": 2,
+   ".cpp": 1,
+   ".cu": 1,
+   ".csv": 1,
+   ".json": 1
+  }
+ },
+ "licence": {
+  "spdx": "Apache-2.0",
+  "class": "A",
+  "source_file": "LICENSE",
+  "redistribution_allowed": true
+ },
+ "dependencies": {
+  "count": 0,
+  "unique": 0,
+  "by_ecosystem": {},
+  "list": []
+ },
+ "owasp_top10": {
+  "total_findings": 19,
+  "files_with_findings": 13,
+  "severity": {
+   "high": 5,
+   "medium": 1,
+   "low": 13
+  },
+  "categories": {
+   "A01-BrokenAccessControl": {
+    "count": 0,
+    "findings": []
+   },
+   "A02-CryptographicFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A03-Injection": {
+    "count": 6,
+    "findings": [
+     {
+      "severity": "high",
+      "file": "bloom.py",
+      "line": 280,
+      "cwe": "CWE-95",
+      "snippet": "model.eval()"
+     },
+     {
+      "severity": "high",
+      "file": "llama.py",
+      "line": 306,
+      "cwe": "CWE-95",
+      "snippet": "model.eval()"
+     },
+     {
+      "severity": "high",
+      "file": "opt.py",
+      "line": 258,
+      "cwe": "CWE-95",
+      "snippet": "model = model.eval()"
+     },
+     {
+      "severity": "medium",
+      "file": "zeroShot/tasks/superglue.py",
+      "line": 467,
+      "cwe": "CWE-89",
+      "snippet": "passage = general_detokenize(pre + \" *{}*\".format(doc[\"span2_text\"]) + post)"
+     },
+     {
+      "severity": "high",
+      "file": "zeroShot/models/bloom.py",
+      "line": 24,
+      "cwe": "CWE-95",
+      "snippet": "self.model.eval()"
+     },
+     {
+      "severity": "high",
+      "file": "zeroShot/models/opt.py",
+      "line": 25,
+      "cwe": "CWE-95",
+      "snippet": "self.model.eval()"
+     }
+    ]
+   },
+   "A04-InsecureDesign": {
+    "count": 11,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "opt.py",
+      "line": 230,
+      "cwe": "CWE-",
+      "snippet": "# TODO: perform packing on GPU"
+     },
+     {
+      "severity": "low",
+      "file": "zeroShot/evaluator.py",
+      "line": 115,
+      "cwe": "CWE-",
+      "snippet": "# TODO: we need unit tests & sanity checks or something to ensure that the return of `validation_docs` is stable"
+     },
+     {
+      "severity": "low",
+      "file": "zeroShot/metrics.py",
+      "line": 134,
+      "cwe": "CWE-",
+      "snippet": "Higher is better  # TODO I think"
+     },
+     {
+      "severity": "low",
+      "file": "zeroShot/tasks/glue.py",
+      "line": 30,
+      "cwe": "CWE-",
+      "snippet": "# TODO(jon-tow): Add citations for the individual datasets/tasks that make up GLUE."
+     },
+     {
+      "severity": "low",
+      "file": "zeroShot/tasks/superglue.py",
+      "line": 10,
+      "cwe": "CWE-",
+      "snippet": "TODO: WSC requires free-form generation."
+     },
+     {
+      "severity": "low",
+      "file": "zeroShot/tasks/__init__.py",
+      "line": 12,
+      "cwe": "CWE-",
+      "snippet": "# TODO: Add the rest of the results!"
+     },
+     {
+      "severity": "low",
+      "file": "zeroShot/tasks/local_datasets/lambada/lambada.py",
+      "line": 14,
+      "cwe": "CWE-",
+      "snippet": "# TODO: Address all TODOs and remove all explanatory comments"
+     },
+     {
+      "severity": "low",
+      "file": "zeroShot/models/bloom.py",
+      "line": 48,
+      "cwe": "CWE-",
+      "snippet": "# TODO: fix multi-gpu"
+     },
+     {
+      "severity": "low",
+      "file": "zeroShot/models/fast_trueobs.py",
+      "line": 36,
+      "cwe": "CWE-",
+      "snippet": "if len(inp.shape) == 2: # TODO: may not work for convnets"
+     },
+     {
+      "severity": "low",
+      "file": "zeroShot/models/models_utils.py",
+      "line": 109,
+      "cwe": "CWE-",
+      "snippet": "# TODO: Add an optional max length"
+     },
+     {
+      "severity": "low",
+      "file": "zeroShot/models/opt.py",
+      "line": 51,
+      "cwe": "CWE-",
+      "snippet": "# TODO: fix multi-gpu"
+     }
+    ]
+   },
+   "A05-SecurityMisconfiguration": {
+    "count": 0,
+    "findings": []
+   },
+   "A06-VulnerableComponents": {
+    "count": 0,
+    "findings": []
+   },
+   "A07-AuthFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A08-SoftwareDataIntegrity": {
+    "count": 2,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "zeroShot/metrics.py",
+      "line": 146,
+      "cwe": "CWE-319",
+      "snippet": "Source: http://www.cs.umd.edu/~snover/tercom/"
+     },
+     {
+      "severity": "low",
+      "file": "zeroShot/tasks/local_datasets/lambada/lambada.py",
+      "line": 7,
+      "cwe": "CWE-319",
+      "snippet": "#     http://www.apache.org/licenses/LICENSE-2.0"
+     }
+    ]
+   },
+   "A09-LoggingMonitoringFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A10-SSRF": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "owasp_llm_top10": {
+  "total_findings": 7,
+  "files_with_findings": 7,
+  "severity": {
+   "high": 0,
+   "medium": 7,
+   "low": 0
+  },
+  "categories": {
+   "LLM01-PromptInjection": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM02-SensitiveInfoDisclosure": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM03-SupplyChain": {
+    "count": 7,
+    "findings": [
+     {
+      "severity": "medium",
+      "file": "bloom.py",
+      "line": 21,
+      "cwe": "CWE-494",
+      "snippet": "model = BloomForCausalLM.from_pretrained(model, torch_dtype='auto')"
+     },
+     {
+      "severity": "medium",
+      "file": "datautils.py",
+      "line": 16,
+      "cwe": "CWE-494",
+      "snippet": "tokenizer = AutoTokenizer.from_pretrained(model, use_fast=False)"
+     },
+     {
+      "severity": "medium",
+      "file": "llama.py",
+      "line": 19,
+      "cwe": "CWE-494",
+      "snippet": "model = LlamaForCausalLM.from_pretrained(model, torch_dtype='auto')"
+     },
+     {
+      "severity": "medium",
+      "file": "opt.py",
+      "line": 19,
+      "cwe": "CWE-494",
+      "snippet": "model = OPTForCausalLM.from_pretrained(model, torch_dtype='auto')"
+     },
+     {
+      "severity": "medium",
+      "file": "zeroShot/datautils.py",
+      "line": 16,
+      "cwe": "CWE-494",
+      "snippet": "tokenizer = AutoTokenizer.from_pretrained(model, use_fast=False)"
+     },
+     {
+      "severity": "medium",
+      "file": "zeroShot/models/bloom.py",
+      "line": 23,
+      "cwe": "CWE-494",
+      "snippet": "self.model = BloomForCausalLM.from_pretrained(self.model_name, torch_dtype='auto')"
+     },
+     {
+      "severity": "medium",
+      "file": "zeroShot/models/opt.py",
+      "line": 23,
+      "cwe": "CWE-494",
+      "snippet": "self.model = OPTForCausalLM.from_pretrained(self.model_name, torch_dtype='auto')"
+     }
+    ]
+   },
+   "LLM04-DataPoisoning": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM05-ImproperOutputHandling": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM06-ExcessiveAgency": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM07-SystemPromptLeak": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM08-VectorEmbeddingWeaknesses": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM09-Misinformation": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM10-UnboundedConsumption": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "sbom": {
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:7c01b1e3-ac1f-55ec-b45f-b30c9e2d2216",
+  "version": 1,
+  "metadata": {
+   "timestamp": "2026-10-06T10:08:40Z",
+   "component": {
+    "type": "application",
+    "name": "GPTQ",
+    "version": "83b357604d34",
+    "bom-ref": "pkg:generic/anticloud/GPTQ@83b357604d34",
+    "purl": "pkg:generic/anticloud/GPTQ@83b357604d34",
+    "licenses": [
+     {
+      "license": {
+       "id": "Apache-2.0"
+      }
+     }
+    ]
+   },
+   "properties": [
+    {
+     "name": "anticloud:source-commit",
+     "value": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE"
+    },
+    {
+     "name": "anticloud:source-url",
+     "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+    },
+    {
+     "name": "anticloud:tier",
+     "value": "tier-agent"
+    }
+   ]
+  },
+  "components": []
+ },
+ "elapsed_seconds": 4.56
+}
