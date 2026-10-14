@@ -1,0 +1,10 @@
+{
+  "project": "GPTQ",
+  "category": "CHIP_QUANTIZATION",
+  "path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\CHIP_QUANTIZATION\\GPTQ",
+  "status": "failed",
+  "reason": "no 40-hex git HEAD SHA (head='REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE'; sanitized clone or .git absent)",
+  "files_count": 41,
+  "lines_of_code": 6820,
+  "sha": "REMOVED_CONTAMINATED_SHA_PENDING_API_RESOLVE"
+}
