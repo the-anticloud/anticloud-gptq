@@ -540,10 +540,10 @@
  "version": "1.0.0",
  "source": {
   "git": {
-   "head": "9f7d37072917ab3a7545835f23e808294a542153",
-   "url": "https://github.com/AutoGPTQ/AutoGPTQ",
-   "branch": "main",
-   "sha_verified_from": "GitHub API commits/main"
+   "url": "https://github.com/IST-DASLab/gptq",
+   "head": "2d65066eeb06a5c9ff5184d8cebdf33662c67faf",
+   "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
+   "previous_substitute": "https://github.com/AutoGPTQ/AutoGPTQ"
   }
  }
 }
