@@ -543,7 +543,7 @@
    "url": "https://github.com/IST-DASLab/gptq",
    "head": "2d65066eeb06a5c9ff5184d8cebdf33662c67faf",
    "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
-   "previous_substitute": "https://github.com/AutoGPTQ/AutoGPTQ"
+   "previous_substitute": "https://github.com/IST-DASLab/gptq"
   }
  }
 }
